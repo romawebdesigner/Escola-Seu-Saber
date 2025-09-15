@@ -1,0 +1,75 @@
+:root{
+  --blue:#1518c0;
+  --red:#cd0a0a;
+  --yellow:#f19d14;
+  --muted:#444;
+  --bg:#f9f9f9;
+  --card:#fff;
+  --radius:12px;
+  --shadow:0 4px 12px rgba(0,0,0,0.08);
+  font-family:'Arial', sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--muted);line-height:1.5}
+.wrap{max-width:1100px;margin:28px auto;padding:0 18px}
+
+/* Header */
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:60;background:linear-gradient(90deg,var(--blue),var(--red),var(--yellow));color:#fff;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;padding:12px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-text .site-title{font-weight:700;font-size:1.2rem;color:#fff}
+.nav-list{display:flex;gap:12px;align-items:center;list-style:none;margin:0;padding:0}
+.nav-list li{position:relative}
+.nav-list a,.sub-btn,.btn-cta{padding:8px 12px;border-radius:8px;color:#fff;text-decoration:none;font-weight:600}
+
+/*Botão*/
+.btn-cta {
+  background: #022d5f; /* azul */
+  color: #fff;          /* texto branco */
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+/* Dropdown */
+.has-sub .sub-btn{background:none;border:none;cursor:pointer}
+.sub-menu{position:absolute;top:calc(100%+8px);left:0;background:#fff;border-radius:10px;padding:8px;box-shadow:var(--shadow);min-width:180px;display:none}
+.sub-menu a{color:var(--muted);padding:8px;display:block;text-decoration:none}
+.sub-menu a:hover{background:var(--bg)}
+.has-sub:hover .sub-menu{display:block}
+
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  height: 420px;
+  background: url('img/Banner\ Escola.jpg') center/cover no-repeat;
+}
+.banner-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4)}
+.hero-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;text-align:center}
+.hero-content h1{font-size:2rem;margin:0 0 12px}
+.hero-content p{font-size:1.1rem;margin-bottom:12px}
+.hero-content .btn-primary{background:linear-gradient(90deg,var(--blue),var(--red));color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+
+/* Sections */
+.section{margin-top:20px}
+h2{color:var(--blue);margin-bottom:12px}
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.grid-4{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+.grid-3{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+
+/* Form */
+form{display:grid;gap:8px}
+input,textarea{padding:10px;border-radius:8px;border:1px solid #ccc;font-size:0.95rem}
+button{padding:10px;border-radius:8px;border:0;background:var(--yellow);color:#000;font-weight:700;cursor:pointer}
+
+/* Footer */
+footer{background:var(--red);color:#fff;text-align:center;padding:20px;margin-top:30px}
+footer a{color:#fff;text-decoration:underline}
+
+/* Responsive */
+@media(min-width:720px){
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+}
